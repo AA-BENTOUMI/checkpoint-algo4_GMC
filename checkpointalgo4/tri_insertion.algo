@@ -1,0 +1,24 @@
+
+ALGORITHM tri_insertion
+VAR
+
+    i , j , temp: INTEGER;
+    T   : ARRAY_OF type[];
+
+BEGIN
+
+    FOR i FROM 1 TO T.lenght-1 STEP 1  DO
+
+        j = i ;
+        temp = T[i]
+
+        WHILE (j>0 and T[j-1]>temp) DO
+            T[j] = T[j-1]
+            j = j - 1;
+        END_WHILE
+
+        T [j] = temp;
+
+    END_FOR
+
+END
